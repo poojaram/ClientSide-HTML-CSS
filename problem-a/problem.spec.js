@@ -19,6 +19,7 @@ describe('Source code is valid', () => {
       'line-end-style':false, //either way
       'indent-style':false, //can mix/match
       'indent-width':false, //don't need to beautify
+      'line-no-trailing-whitespace': false, //don't need to beautify
       'id-class-style':false, //I like dashes in classnames
       'img-req-alt':false, //for this test; captured later!
     }
