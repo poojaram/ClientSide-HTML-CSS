@@ -148,10 +148,12 @@ describe('Includes required CSS rules', () => {
     expect(hoverRules[0].selectors.join().includes(':active')); //hover rule also applies to active
     expect(hoverRules[0].selectors.join().includes(':focus')); //hover rule also applies to focus
 
-    let colorDeclaration = hoverRules[0].declarations.filter((d) => d.property === 'color');
+    let hoverRuleDeclarations = hoverRules[0].declarations.filter((d) => d.type === 'declaration')
+
+    let colorDeclaration = hoverRuleDeclarations.filter((d) => d.property === 'color');
     expect(colorDeclaration[0].value.toLowerCase()).toEqual('#b7a57a'); //color changes on hover
 
-    let bottomBorderDeclarations = hoverRules[0].declarations.filter((d) => d.property.includes('border-bottom'));
+    let bottomBorderDeclarations = hoverRuleDeclarations.filter((d) => d.property.includes('border-bottom'));
     let bottomBorderValues = bottomBorderDeclarations.map((d) => d.value).join();
     expect(bottomBorderValues).toMatch(/\.6rem/); //bottom border is correct size
     expect(bottomBorderValues).toMatch(/solid/); //bottom border is solid

@@ -184,7 +184,7 @@ describe('Table row styling', () => {
       }
     })
 
-    let pseudoChildRules = cssRules.filter((r) => r.selectors.join().includes(':nth-child'));
+    let pseudoChildRules = cssRules.filter((r) => r.selectors.join().includes(':nth-'));
     expect(pseudoChildRules).toHaveLength(1); //uses a pseudo-class to color rows
   })
 

@@ -93,8 +93,11 @@ describe('Includes required CSS rules', () => {
   test('7. Path is color changes on hover', () => {
     let hoverRules = cssRules.filter((r) => r.selectors.join().includes(':hover'));
     expect(hoverRules.length).toEqual(1); //should have one hover rule
-    expect(hoverRules[0].declarations[0].property).toEqual('fill'); //has 'fill' as property
-    expect(hoverRules[0].declarations[0].value.toLowerCase()).toEqual('#bd250d'); //has 'correct color'
+
+    let hoverRuleDeclarations = hoverRules[0].declarations.filter((d) => d.type === 'declaration') //ignore comments
+
+    expect(hoverRuleDeclarations[0].property).toEqual('fill'); //has 'fill' as property
+    expect(hoverRuleDeclarations[0].value.toLowerCase()).toEqual('#bd250d'); //has 'correct color'
   })
 
   test('8. Rectangles have opacity of 0', () => {
