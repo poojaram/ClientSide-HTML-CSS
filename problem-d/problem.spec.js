@@ -127,7 +127,7 @@ describe('Includes required CSS rules', () => {
   })
 
   test('7. Search button has correctly styled icon', () => {
-    let faLink = $('link').filter((i,el) => $(el).attr('href').includes('font-awesome.min.css'));
+    let faLink = $('link').filter((i,el) => $(el).attr('href').match(/font-?awesome.*(all)?(\.min)?\.css/));
     expect(faLink.length).toEqual(1); //html includes link to Font Awesome
 
     let searchButton = $('.searchBox').children('button');
