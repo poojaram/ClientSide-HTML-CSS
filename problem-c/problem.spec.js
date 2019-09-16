@@ -27,8 +27,9 @@ describe('Source code is valid', () => {
       'indent-style':false, //can mix/match
       'indent-width':false, //don't need to beautify
       'line-no-trailing-whitespace': false, //don't need to beautify
-      'id-class-style':false, //I like dashes in classnames
+      'class-style':'none', //I like dashes in classnames
       'img-req-alt':true,
+      'link-req-noopener':false,
     }
 
     await expect(htmlPath).toHaveNoHtmlLintErrorsAsync(lintOpts);
