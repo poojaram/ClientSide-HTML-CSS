@@ -1,6 +1,6 @@
-header {
+h1 {
     font-weight: 300;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     text-align: center;
 }
 
@@ -11,9 +11,27 @@ table {
     border-collapse: collapse;
 }
 
-.table-header {
+th, td {
+    padding: 5px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+table thead tr th {
     height: 2rem;
     text-align: left;
     color: #1db954;
     background-color: #d3d3d3;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+tbody tr:hover {
+    background-color: pink;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #eee;
 }
