@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open\ Sans/Open\ Sans/OpenSansregular.ttf');
+}
+
+@font-face {
+    font-family: 'Encode Sans';
+    src: url('../fonts/Encode\ Sans/Encode\ Sans\ Normal/EncodeSansNormal-900-Black.ttf');
+}
+
+body {
+    color: #535353;
+    font-family: 'Open Sans', sans-serif;
+    margin: 8px;
+}
+
+h1, h2 {
+    color: #4b2e83;
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 3em;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #4b2e83;
+    padding: .75rem;
+}
+
+.plain {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-top: .5rem;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.searchBox {
+    float: right;
+}
+
+.searchBox input {
+    height: 2.5rem;
+    font-size: 1rem;
+    padding: .5rem;
+    vertical-align: bottom;
+}
+
+.searchBox button {
+    height: 2.5rem;
+    font-size: 1.5rem;
+    padding: .3rem;
+}
+nav:hover:active:focus {
+    color: #b7a57a;
+    border-bottom: .6rem solid #b7a57a;
+}
+a {
+    padding: .8rem;
+}
+
+.logo {
+    background-image: url('../img/ischool-symbol-white.png');
+    padding-left: 1em;
+    padding-right: 1em;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
